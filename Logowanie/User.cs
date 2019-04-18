@@ -51,7 +51,9 @@ namespace Logowanie
             get { return Password; }
             set { this.Password = Hasło(value); }
         }
-
+        /// <summary>
+        /// ///
+        /// </summary>
         public bool isAdmin2
         {
             get { return isAdmin; }
