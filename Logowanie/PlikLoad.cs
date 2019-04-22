@@ -15,7 +15,7 @@ namespace Logowanie
     {
         public delegate List<User> Load(string x);
         public Load load;
-        public delegate List<User> Aut(string x, string y, List<User> a);
+        public delegate void Aut(string x, string y, List<User> a);
         public Aut a;
         public Class1()
         {
@@ -38,17 +38,7 @@ namespace Logowanie
                     Enum.TryParse<Ranga>(element[3].ToString(), out ranga);
                     return new User(Guid.Parse(element[0]), element[1], element[2], ranga);
                 }).ToList();
-                //using (StreamReader reader = new StreamReader(scieszka))
-                //{
-                //    string wiersz;
-                //    while ((wiersz = reader.ReadLine()) != null)
-                //    {
-                //        wiersze.Add(wiersz);
-                //        string[] element = wiersz.Split(';');
-                //        list.Add(new User(Guid.Parse(element[0]), element[1], element[2], bool.Parse(element[3])));
 
-                //    }
-                //}
             }
             catch (FileNotFoundException)
             {
@@ -72,7 +62,7 @@ namespace Logowanie
             return list;
         }
 
-        private List<User> autoryz(string x, string y, List<User> a)
+        private void autoryz(string x, string y, List<User> a)
         {
             foreach (User u in a)
             {
@@ -87,10 +77,16 @@ namespace Logowanie
                 }
                 else if (u.UserName == x && (u.PassCrypt(y) == false))
                 {
-                    MessageBox.Show("Błędne Hasło", "Błąd logowania", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Błędne Hasło", "Błąd Logowania", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Application.Exit();
+                }
+                else
+                {
+                    MessageBox.Show("Brak Użytkownika","Błąd Logowania", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
                 }
             }
-            return a;
+           
            
         }
 

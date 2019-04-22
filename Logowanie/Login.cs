@@ -33,31 +33,8 @@ namespace Logowanie
         private void logowanie()
         {
             Class1 K = new Class1();
-            list = K.a.Invoke(textBox_login.Text, textBox_pass.Text,list);
-            //foreach (User u in list)
-            //{
-            //    if (u.UserName == textBox_login.Text && u.PassCrypt(textBox_pass.Text) == true)
-            //    {
-            //
-            //        this.Hide();
-            //        Form1 f = new Form1(u.UserName, u.isAdmin);
-            //
-            //        f.Show();
-            //        break;
-            //    }
-            //    else if (u.UserName == textBox_login.Text && (u.PassCrypt(textBox_pass.Text) == false))
-            //    {
-            //        MessageBox.Show("Błędne Hasło", "Błąd logowania", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    }
-            //}
-            //if ((u.UserName == textBox_login.Text) == false)
-            // {
-            //     MessageBox.Show("Błędny login", "Błąd logowania", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            // }
-            // else if (u.PassCrypt(textBox_pass.Text) == false)
-            // {
-            //     MessageBox.Show("Błędne Hasło", "Błąd logowania", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            // }
+             K.a.Invoke(textBox_login.Text, textBox_pass.Text,list);
+
 
             Hide();
         }

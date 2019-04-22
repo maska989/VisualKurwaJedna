@@ -15,8 +15,8 @@ namespace Logowanie
         public string Password;
         public Ranga isAdmin;
 
-       // public User() { }
-        
+
+    
 
         public User(string UserName, string Password, Ranga isAdmin)
         {
@@ -54,9 +54,7 @@ namespace Logowanie
             get { return Password; }
             set { this.Password = Hasło(value); }
         }
-        /// <summary>
-        /// ///
-        /// </summary>
+
         public Ranga isAdmin2
         {
             get { return isAdmin; }
@@ -72,11 +70,7 @@ namespace Logowanie
             byte[] crypted = crypt.GetBytes(25);//bezpieczne hasło to 25 znaków
             return Convert.ToBase64String(crypted);
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Has"></param>
-        /// <returns></returns>
+
         public bool PassCrypt(string Has)
         {
             byte[] salt = Encoding.ASCII.GetBytes(uid+"8419"+"DamianModzelewski");

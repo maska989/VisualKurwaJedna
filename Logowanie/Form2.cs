@@ -16,35 +16,29 @@ namespace Logowanie
         public BindingSource rdzen = new BindingSource();
         Login ListaLog = new Login();
         public List<User> list = new List<User> { };
-       // User isa = new User();
+        
+
 
 
         public Form2()
         {
-            
+            //Ranga isAdmin;
+            //Enum.TryParse<Ranga>(SetUserState.SelectedValue.ToString(), out isAdmin);
             list = ListaLog.list;
             rdzen.DataSource = list;
             InitializeComponent();
             SetUserState.DataSource = Enum.GetValues(typeof(Ranga));
-            //if (isa.isAdmin == Ranga.Moderator)
+            //if (isAdmin ==(Ranga)1)
             //{
             //    tabControl1.TabPages.Remove(tabPage1);
             //}
+           
         }
         private void button4_Click(object sender, EventArgs e) //zapisz w Tab Edycja
         {
 
             PlikDodaj o1 = new PlikDodaj();
-            rdzen = o1.S2.Invoke("DM8419",rdzen);
-
-            //string sPath = "DM8419.bin";
-            //using (System.IO.StreamWriter SaveFile = new System.IO.StreamWriter(sPath))
-            //{
-            //    foreach (User p in rdzen)
-            //    {
-            //        SaveFile.WriteLine(p);
-            //    }
-            //}
+            o1.S2.Invoke("DM8419",rdzen);
         }
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {

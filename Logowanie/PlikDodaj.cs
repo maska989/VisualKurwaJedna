@@ -13,13 +13,9 @@ namespace Logowanie
     {
         public delegate List<User> Save(string x,string y,Ranga a);
         public Save S;
-        public delegate BindingSource Save2(string x,BindingSource rdzen);
+        public delegate void Save2(string x,BindingSource rdzen);
         public Save2 S2;
-        //2
 
-            /// <summary>
-            /// 
-            /// </summary>
         public PlikDodaj(){
 
         S += Dodawanie;
@@ -35,7 +31,7 @@ namespace Logowanie
             list.Add(new User(x, y, a));
             return list;
         }
-        private BindingSource Dodawanie2(string x,BindingSource rdzen)
+        private void Dodawanie2(string x,BindingSource rdzen)
         {
             string scieszka = Directory.GetCurrentDirectory() + "\\" + x + ".BIN";
             string sPath = scieszka;
@@ -47,8 +43,7 @@ namespace Logowanie
                 }
                 
             }
-            //rdzen.DataSource = list;
-            return rdzen;
+            
         }
     }
 }
