@@ -22,7 +22,7 @@ namespace Logowanie
             list = ListaLog.list;
             rdzen.DataSource = list;
             InitializeComponent();
-            SetUserState.DataSource = Enum.GetValues(typeof(ranga.Ranga));
+            SetUserState.DataSource = Enum.GetValues(typeof(Ranga));
 
 
         }
@@ -58,8 +58,8 @@ namespace Logowanie
 
         private void button1_Click(object sender, EventArgs e) //Dodaj z zapisem w Tab Dodaj
         {
-            ranga.Ranga isAdmin;
-            Enum.TryParse<ranga.Ranga>(SetUserState.SelectedValue.ToString(), out isAdmin);
+            Ranga isAdmin;
+            Enum.TryParse<Ranga>(SetUserState.SelectedValue.ToString(), out isAdmin);
             list.Add(new User(textBox1.Text, textBox2.Text, isAdmin));
             rdzen.DataSource = list;
             button4_Click(sender, e); // zapis do pliku
@@ -78,6 +78,32 @@ namespace Logowanie
         private void Form2_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (this.dataGridView1.SelectedRows.Count == 1)
+            {
+                // wybranie guid z zaznaczonego wiersza
+                Guid selectedGuid = (Guid)this.dataGridView1.SelectedRows[0].Cells[0].Value;
+                //wybranie pierwszego usera z listy  za pomocą linq dla którego spełniona jest lambda (x => x)
+                // lambda - wyrarzenie logiczne prawda fałsz sprawdzane dla karzdego elementu w kolekcji
+                PasswordChange frmPass = new PasswordChange(list.First(u => u.uid2 == selectedGuid));
+
+                
+                if(frmPass.ShowDialog() == DialogResult.Cancel)
+                {
+                    rdzen.DataSource = null;
+                    rdzen.DataSource = list;
+                    dataGridView1.DataSource = rdzen;
+                }
+                
+
+            }
+            else
+            {
+                MessageBox.Show("Musisz wybrać tylko 1");
+            }
         }
     }
 }

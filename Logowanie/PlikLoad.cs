@@ -34,9 +34,9 @@ namespace Logowanie
                 list = File.ReadLines(scieszka).Select(l =>
                 {
                     string[] element = l.Split(';');
-                    ranga.Ranga Ranga;
-                    Enum.TryParse<ranga.Ranga>(element[3].ToString(), out Ranga);
-                    return new User(Guid.Parse(element[0]), element[1], element[2], Ranga);
+                    Ranga ranga;
+                    Enum.TryParse<Ranga>(element[3].ToString(), out ranga);
+                    return new User(Guid.Parse(element[0]), element[1], element[2], ranga);
                 }).ToList();
                 //using (StreamReader reader = new StreamReader(scieszka))
                 //{
@@ -58,7 +58,7 @@ namespace Logowanie
                 {
                     using (StreamWriter sw = File.CreateText(scieszka))
                     {
-                        list.Add(new User("D", "M", (Enum)ranga.Ranga.Administrator));
+                        list.Add(new User("D", "M", Ranga.Administrator));
                         Login L = new Login();
                         L.Hide();
                     }

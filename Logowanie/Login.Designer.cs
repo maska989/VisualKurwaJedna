@@ -61,6 +61,7 @@
             this.textBox_pass.PasswordChar = '*';
             this.textBox_pass.Size = new System.Drawing.Size(265, 25);
             this.textBox_pass.TabIndex = 2;
+            this.textBox_pass.Text = "Modzelewski";
             this.textBox_pass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_pass_KeyDown);
             // 
             // textBox_login
@@ -71,6 +72,7 @@
             this.textBox_login.Name = "textBox_login";
             this.textBox_login.Size = new System.Drawing.Size(265, 25);
             this.textBox_login.TabIndex = 2;
+            this.textBox_login.Text = "Damian";
             // 
             // label1
             // 

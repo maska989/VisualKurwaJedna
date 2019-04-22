@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace Logowanie
 {
-    class ranga
+    public enum Ranga
     {
-       public enum Ranga
-        {
-            User = 0,
-            Moderator,
-            Administrator = 99,
-        }
+        User = 0,
+        Moderator,
+        Administrator = 99,
     }
 }

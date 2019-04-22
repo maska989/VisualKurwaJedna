@@ -12,11 +12,11 @@ namespace Logowanie
         public Guid uid;
         public string UserName;
         public string Password;
-        public Enum isAdmin;
+        public Ranga isAdmin;
 
         
 
-        public User(string UserName, string Password, Enum isAdmin)
+        public User(string UserName, string Password, Ranga isAdmin)
         {
             this.uid = Guid.NewGuid();
             Console.WriteLine("Guid: {0}", uid);
@@ -24,7 +24,7 @@ namespace Logowanie
             this.Password = Hasło(Password);
             this.isAdmin = isAdmin;
         }
-        public User(Guid uid, string UserName, string Password, Enum isAdmin)
+        public User(Guid uid, string UserName, string Password, Ranga isAdmin)
         {
             this.uid = uid;
             this.UserName = UserName;
@@ -55,11 +55,14 @@ namespace Logowanie
         /// <summary>
         /// ///
         /// </summary>
-        public Enum isAdmin2
+        public Ranga isAdmin2
         {
             get { return isAdmin; }
             set { this.isAdmin = value; }
         }
+
+
+
         public string Hasło(string Has)
         {
             byte[] salt = Encoding.ASCII.GetBytes(uid + "8419" + "DamianModzelewski");
