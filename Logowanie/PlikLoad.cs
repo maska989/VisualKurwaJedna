@@ -28,12 +28,15 @@ namespace Logowanie
             List<User> list = new List<User> { };
             string scieszka = Directory.GetCurrentDirectory() + "\\" + x + ".BIN";
             List<string> wiersze = new List<string>();
+
             try
             {
                 list = File.ReadLines(scieszka).Select(l =>
                 {
                     string[] element = l.Split(';');
-                    return new User(Guid.Parse(element[0]), element[1], element[2], element[3]);
+                    ranga.Ranga Ranga;
+                    Enum.TryParse<ranga.Ranga>(element[3].ToString(), out Ranga);
+                    return new User(Guid.Parse(element[0]), element[1], element[2], Ranga);
                 }).ToList();
                 //using (StreamReader reader = new StreamReader(scieszka))
                 //{
@@ -56,6 +59,8 @@ namespace Logowanie
                     using (StreamWriter sw = File.CreateText(scieszka))
                     {
                         list.Add(new User("D", "M", (Enum)ranga.Ranga.Administrator));
+                        Login L = new Login();
+                        L.Hide();
                     }
                 }
                 else if (dialogResult == DialogResult.No)

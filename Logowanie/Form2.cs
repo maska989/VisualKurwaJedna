@@ -58,8 +58,9 @@ namespace Logowanie
 
         private void button1_Click(object sender, EventArgs e) //Dodaj z zapisem w Tab Dodaj
         {
-
-            list.Add(new User(textBox1.Text, textBox2.Text, Enum.Parse(typeof(ranga.Ranga),SetUserState.SelectedText)));
+            ranga.Ranga isAdmin;
+            Enum.TryParse<ranga.Ranga>(SetUserState.SelectedValue.ToString(), out isAdmin);
+            list.Add(new User(textBox1.Text, textBox2.Text, isAdmin));
             rdzen.DataSource = list;
             button4_Click(sender, e); // zapis do pliku
         }

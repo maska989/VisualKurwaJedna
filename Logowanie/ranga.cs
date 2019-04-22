@@ -8,7 +8,7 @@ namespace Logowanie
 {
     class ranga
     {
-       [Flags] public enum Ranga
+       public enum Ranga
         {
             User = 0,
             Moderator,
