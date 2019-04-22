@@ -13,16 +13,12 @@ namespace Logowanie
     public partial class Form1 : Form
     {
 
-        public Form1(string UserName, bool isAdmin)
+        public Form1(string UserName, Enum isAdmin)
         {
 
             InitializeComponent();
             label1.Text = UserName;
-            checkBox1.Checked = isAdmin;
-            if(isAdmin)
-            {
-                Edycja.Visible = true;
-            }
+           
 
         }
 

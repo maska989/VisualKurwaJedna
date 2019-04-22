@@ -28,6 +28,7 @@ namespace Logowanie
         {
 
             logowanie();
+            this.Hide();
         }
         private void logowanie()
         {

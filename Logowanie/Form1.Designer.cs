@@ -49,7 +49,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Enabled = false;
             this.checkBox1.Location = new System.Drawing.Point(133, 12);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(112, 21);
             this.checkBox1.TabIndex = 1;
@@ -59,13 +59,12 @@
             // Edycja
             // 
             this.Edycja.Location = new System.Drawing.Point(315, 118);
-            this.Edycja.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Edycja.Margin = new System.Windows.Forms.Padding(4);
             this.Edycja.Name = "Edycja";
             this.Edycja.Size = new System.Drawing.Size(100, 30);
             this.Edycja.TabIndex = 2;
             this.Edycja.Text = "Edycja";
             this.Edycja.UseVisualStyleBackColor = true;
-            this.Edycja.Visible = false;
             this.Edycja.Click += new System.EventHandler(this.Edycja_Click);
             // 
             // Form1
@@ -79,7 +78,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe Script", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "State";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);

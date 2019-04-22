@@ -16,12 +16,15 @@ namespace Logowanie
         public BindingSource rdzen = new BindingSource();
         Login ListaLog = new Login();
         public List<User> list = new List<User> { };
+        
         public Form2()
         {
             list = ListaLog.list;
             rdzen.DataSource = list;
             InitializeComponent();
-            
+            SetUserState.DataSource = Enum.GetValues(typeof(ranga.Ranga));
+
+
         }
         private void button4_Click(object sender, EventArgs e) //zapisz w Tab Edycja
         {
@@ -48,14 +51,15 @@ namespace Logowanie
                 dataGridView1.Columns[0].HeaderText = "Uid";
                 dataGridView1.Columns[1].HeaderText = "Login";
                 dataGridView1.Columns[2].HeaderText = "Hasło";
-                dataGridView1.Columns[3].HeaderText = "Admin?";
+                dataGridView1.Columns[3].HeaderText = "Ranga";
             }
 
         }
 
         private void button1_Click(object sender, EventArgs e) //Dodaj z zapisem w Tab Dodaj
         {
-            list.Add(new User(textBox1.Text, textBox2.Text, checkBox1.Checked));
+
+            list.Add(new User(textBox1.Text, textBox2.Text, Enum.Parse(typeof(ranga.Ranga),SetUserState.SelectedText)));
             rdzen.DataSource = list;
             button4_Click(sender, e); // zapis do pliku
         }
@@ -70,6 +74,9 @@ namespace Logowanie
             }
         }
 
-
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

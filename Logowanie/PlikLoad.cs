@@ -33,7 +33,7 @@ namespace Logowanie
                 list = File.ReadLines(scieszka).Select(l =>
                 {
                     string[] element = l.Split(';');
-                    return new User(Guid.Parse(element[0]), element[1], element[2], bool.Parse(element[3]));
+                    return new User(Guid.Parse(element[0]), element[1], element[2], element[3]);
                 }).ToList();
                 //using (StreamReader reader = new StreamReader(scieszka))
                 //{
@@ -55,7 +55,7 @@ namespace Logowanie
                 {
                     using (StreamWriter sw = File.CreateText(scieszka))
                     {
-                        list.Add(new User("D", "M", true));
+                        list.Add(new User("D", "M", (Enum)ranga.Ranga.Administrator));
                     }
                 }
                 else if (dialogResult == DialogResult.No)

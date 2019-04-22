@@ -11,7 +11,7 @@ namespace Logowanie
 {
     class PlikDodaj
     {
-        public delegate List<User> Save(string x,string y,bool a);
+        public delegate List<User> Save(string x,string y,Enum a);
         public Save S;
         public delegate BindingSource Save2(string x,BindingSource rdzen);
         public Save2 S2;
@@ -30,7 +30,7 @@ namespace Logowanie
         public List<User> list = new List<User> { };
 
 
-        private List<User> Dodawanie(string x,string y, bool a)
+        private List<User> Dodawanie(string x,string y, Enum a)
         {
             list.Add(new User(x, y, a));
             return list;
