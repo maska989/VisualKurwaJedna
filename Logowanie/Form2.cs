@@ -16,15 +16,20 @@ namespace Logowanie
         public BindingSource rdzen = new BindingSource();
         Login ListaLog = new Login();
         public List<User> list = new List<User> { };
-        
+       // User isa = new User();
+
+
         public Form2()
         {
+            
             list = ListaLog.list;
             rdzen.DataSource = list;
             InitializeComponent();
             SetUserState.DataSource = Enum.GetValues(typeof(Ranga));
-
-
+            //if (isa.isAdmin == Ranga.Moderator)
+            //{
+            //    tabControl1.TabPages.Remove(tabPage1);
+            //}
         }
         private void button4_Click(object sender, EventArgs e) //zapisz w Tab Edycja
         {

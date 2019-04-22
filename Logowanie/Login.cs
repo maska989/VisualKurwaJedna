@@ -26,9 +26,9 @@ namespace Logowanie
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Hide();
             logowanie();
-            this.Hide();
+            
         }
         private void logowanie()
         {
@@ -59,7 +59,7 @@ namespace Logowanie
             //     MessageBox.Show("Błędne Hasło", "Błąd logowania", MessageBoxButtons.OK, MessageBoxIcon.Error);
             // }
 
-
+            Hide();
         }
         private void textBox_pass_KeyDown(object sender, KeyEventArgs e)
         {

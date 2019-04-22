@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 
 namespace Logowanie
 {
+    
     public class User
     {
         public Guid uid;
@@ -14,6 +15,7 @@ namespace Logowanie
         public string Password;
         public Ranga isAdmin;
 
+       // public User() { }
         
 
         public User(string UserName, string Password, Ranga isAdmin)

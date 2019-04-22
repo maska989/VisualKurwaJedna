@@ -18,8 +18,17 @@ namespace Logowanie
 
             InitializeComponent();
             label1.Text = UserName;
-           
-
+            if (isAdmin == (Ranga)99)
+            {
+                Edycja.Visible = true;
+            }
+            else if (isAdmin == (Ranga)1)
+            {
+                Edycja.Visible = true;
+            }
+            else {
+                Edycja.Visible = false;
+            }
         }
 
 
