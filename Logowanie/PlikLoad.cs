@@ -15,7 +15,7 @@ namespace Logowanie
     {
         public delegate List<User> Load(string x);
         public Load load;
-        public delegate List<User> Aut(string x, string y, List<User> a);
+        public delegate void Aut(string x, string y, List<User> a);
         public Aut a;
         public Class1()
         {
@@ -62,7 +62,7 @@ namespace Logowanie
             return list;
         }
 
-        private List<User> autoryz(string x, string y, List<User> a)
+        private void autoryz(string x, string y, List<User> a)
         {
             foreach (User u in a)
             {
@@ -82,7 +82,7 @@ namespace Logowanie
                 }
             }
 
-            return a;
+            
         }
 
     }

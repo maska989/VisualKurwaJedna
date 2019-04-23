@@ -20,17 +20,22 @@ namespace Logowanie
 
 
 
-        public Form2()
+        public Form2(Ranga isAdmin)
         {
+
             
-            User a = new User();
             list = ListaLog.list;
             rdzen.DataSource = list;
             InitializeComponent();
             SetUserState.DataSource = Enum.GetValues(typeof(Ranga));
-            if (a.isAdmin == Ranga.Moderator)
+            
+            if (isAdmin == Ranga.Moderator)
             {
+                dataGridView1.ReadOnly = true;
                 tabControl1.TabPages.Remove(tabPage1);
+                button3.Visible = false;
+
+                PushDatagrid();
             }
 
         }
@@ -42,17 +47,7 @@ namespace Logowanie
         }
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            rdzen.DataSource = null;
-            rdzen.DataSource = list;
-            dataGridView1.DataSource = rdzen;
-            if (dataGridView1.Columns.Count == 4)
-            {
-                dataGridView1.Columns[0].HeaderText = "Uid";
-                dataGridView1.Columns[1].HeaderText = "Login";
-                dataGridView1.Columns[2].HeaderText = "Hasło";
-                dataGridView1.Columns[3].HeaderText = "Ranga";
-            }
-
+            PushDatagrid();
         }
 
         private void button1_Click(object sender, EventArgs e) //Dodaj z zapisem w Tab Dodaj
@@ -87,14 +82,12 @@ namespace Logowanie
                 Guid selectedGuid = (Guid)this.dataGridView1.SelectedRows[0].Cells[0].Value;
                 //wybranie pierwszego usera z listy  za pomocą linq dla którego spełniona jest lambda (x => x)
                 // lambda - wyrarzenie logiczne prawda fałsz sprawdzane dla karzdego elementu w kolekcji
-                PasswordChange frmPass = new PasswordChange(list.First(u => u.uid2 == selectedGuid));
+                PasswordChange frmPass = new PasswordChange(list.First(u => u.uid == selectedGuid));
 
                 
                 if(frmPass.ShowDialog() == DialogResult.Cancel)
                 {
-                    rdzen.DataSource = null;
-                    rdzen.DataSource = list;
-                    dataGridView1.DataSource = rdzen;
+                    PushDatagrid();
                 }
             }
             else
@@ -102,5 +95,20 @@ namespace Logowanie
                 MessageBox.Show("Musisz wybrać tylko 1");
             }
         }
+        private void PushDatagrid()
+        {
+            rdzen.DataSource = null;
+            rdzen.DataSource = list;
+            dataGridView1.DataSource = rdzen;
+            if (dataGridView1.Columns.Count == 4)
+            {
+                dataGridView1.Columns[0].HeaderText = "Uid";
+                dataGridView1.Columns[1].HeaderText = "Login";
+                dataGridView1.Columns[2].HeaderText = "Hasło";
+                dataGridView1.Columns[3].HeaderText = "Ranga";
+            }
+        }
+
+
     }
 }

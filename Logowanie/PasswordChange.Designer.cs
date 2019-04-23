@@ -42,15 +42,17 @@
             this.username.Size = new System.Drawing.Size(35, 13);
             this.username.TabIndex = 0;
             this.username.Text = "label1";
+            this.username.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ranga
             // 
             this.ranga.AutoSize = true;
-            this.ranga.Location = new System.Drawing.Point(125, 91);
+            this.ranga.Location = new System.Drawing.Point(125, 94);
             this.ranga.Name = "ranga";
             this.ranga.Size = new System.Drawing.Size(35, 13);
             this.ranga.TabIndex = 1;
             this.ranga.Text = "label1";
+            this.ranga.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox1
             // 
@@ -61,11 +63,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(105, 190);
+            this.button1.Location = new System.Drawing.Point(97, 185);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(92, 23);
             this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
+            this.button1.Text = "Zmień Hasło";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

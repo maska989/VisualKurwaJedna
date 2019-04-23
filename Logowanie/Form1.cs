@@ -12,7 +12,7 @@ namespace Logowanie
 {
     public partial class Form1 : Form
     {
-
+        Ranga isAdmin;
         public Form1(string UserName, Ranga isAdmin)
         {
 
@@ -32,6 +32,7 @@ namespace Logowanie
             else {
                 Edycja.Visible = false;
             }
+            this.isAdmin = isAdmin;
         }
 
 
@@ -57,7 +58,7 @@ namespace Logowanie
  
         private void Edycja_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Form2 form2 = new Form2(isAdmin);
             form2.Show();
         }
     }
