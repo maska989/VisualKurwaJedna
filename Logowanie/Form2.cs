@@ -96,8 +96,6 @@ namespace Logowanie
                     rdzen.DataSource = list;
                     dataGridView1.DataSource = rdzen;
                 }
-                
-
             }
             else
             {

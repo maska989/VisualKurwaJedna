@@ -15,7 +15,7 @@ namespace Logowanie
     {
         public delegate List<User> Load(string x);
         public Load load;
-        public delegate void Aut(string x, string y, List<User> a);
+        public delegate List<User> Aut(string x, string y, List<User> a);
         public Aut a;
         public Class1()
         {
@@ -62,7 +62,7 @@ namespace Logowanie
             return list;
         }
 
-        private void autoryz(string x, string y, List<User> a)
+        private List<User> autoryz(string x, string y, List<User> a)
         {
             foreach (User u in a)
             {
@@ -80,14 +80,9 @@ namespace Logowanie
                     MessageBox.Show("Błędne Hasło", "Błąd Logowania", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Application.Exit();
                 }
-                else
-                {
-                    MessageBox.Show("Brak Użytkownika","Błąd Logowania", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    break;
-                }
             }
-           
-           
+
+            return a;
         }
 
     }
