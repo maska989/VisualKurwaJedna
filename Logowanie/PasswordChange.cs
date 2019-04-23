@@ -19,10 +19,7 @@ namespace Logowanie
             user = usr;
             this.username.Text = usr.UserName2;
             this.ranga.Text = Enum.GetName(typeof(Ranga), usr.isAdmin2);
-            if (usr.isAdmin2 == Ranga.Administrator)
-            {
-                textBox1.Enabled = false;
-            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)

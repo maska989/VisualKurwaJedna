@@ -14,7 +14,7 @@ namespace Logowanie
         public string UserName;
         public string Password;
         public Ranga isAdmin;
-
+        public User() { }
 
     
 

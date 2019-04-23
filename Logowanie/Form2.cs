@@ -22,17 +22,17 @@ namespace Logowanie
 
         public Form2()
         {
-            //Ranga isAdmin;
-            //Enum.TryParse<Ranga>(SetUserState.SelectedValue.ToString(), out isAdmin);
+            
+            User a = new User();
             list = ListaLog.list;
             rdzen.DataSource = list;
             InitializeComponent();
             SetUserState.DataSource = Enum.GetValues(typeof(Ranga));
-            //if (isAdmin ==(Ranga)1)
-            //{
-            //    tabControl1.TabPages.Remove(tabPage1);
-            //}
-           
+            if (a.isAdmin == Ranga.Moderator)
+            {
+                tabControl1.TabPages.Remove(tabPage1);
+            }
+
         }
         private void button4_Click(object sender, EventArgs e) //zapisz w Tab Edycja
         {

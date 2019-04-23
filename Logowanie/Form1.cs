@@ -18,6 +18,9 @@ namespace Logowanie
 
             InitializeComponent();
             label1.Text = UserName;
+            
+            ComboRanga.DataSource = Enum.GetValues(typeof(Ranga));
+            ComboRanga.Text = isAdmin.ToString();
             if (isAdmin == (Ranga)99)
             {
                 Edycja.Visible = true;
@@ -39,6 +42,7 @@ namespace Logowanie
             Form f = new Login();
             
             f.Show();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

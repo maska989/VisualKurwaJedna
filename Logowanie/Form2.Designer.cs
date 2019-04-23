@@ -202,6 +202,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edycja użytkowników.";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

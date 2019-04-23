@@ -37,7 +37,7 @@
             // username
             // 
             this.username.AutoSize = true;
-            this.username.Location = new System.Drawing.Point(13, 13);
+            this.username.Location = new System.Drawing.Point(125, 48);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(35, 13);
             this.username.TabIndex = 0;
@@ -46,7 +46,7 @@
             // ranga
             // 
             this.ranga.AutoSize = true;
-            this.ranga.Location = new System.Drawing.Point(16, 30);
+            this.ranga.Location = new System.Drawing.Point(125, 91);
             this.ranga.Name = "ranga";
             this.ranga.Size = new System.Drawing.Size(35, 13);
             this.ranga.TabIndex = 1;
@@ -54,14 +54,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(213, 10);
+            this.textBox1.Location = new System.Drawing.Point(49, 145);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(187, 20);
             this.textBox1.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(267, 36);
+            this.button1.Location = new System.Drawing.Point(105, 190);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -73,7 +73,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 450);
+            this.ClientSize = new System.Drawing.Size(291, 256);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.ranga);
