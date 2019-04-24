@@ -14,18 +14,23 @@ using System.IO;
 
 namespace Logowanie
 {
+    
     public partial class Login : Form
     {
 
+        
         public List<User> list = new List<User> { };
+
         public Login()
         {
             Baza();
             InitializeComponent();
         }
 
+        
         private void button1_Click(object sender, EventArgs e)
         {
+
             Hide();
             logowanie();
             

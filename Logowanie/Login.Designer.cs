@@ -37,7 +37,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel4.Location = new System.Drawing.Point(45, 93);
+            this.panel4.Location = new System.Drawing.Point(13, 69);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(267, 1);
@@ -46,7 +46,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel5.Location = new System.Drawing.Point(45, 191);
+            this.panel5.Location = new System.Drawing.Point(13, 167);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(267, 1);
@@ -55,11 +55,11 @@
             // textBox_pass
             // 
             this.textBox_pass.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox_pass.Location = new System.Drawing.Point(45, 166);
+            this.textBox_pass.Location = new System.Drawing.Point(13, 143);
             this.textBox_pass.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_pass.Name = "textBox_pass";
             this.textBox_pass.PasswordChar = '*';
-            this.textBox_pass.Size = new System.Drawing.Size(265, 25);
+            this.textBox_pass.Size = new System.Drawing.Size(267, 25);
             this.textBox_pass.TabIndex = 2;
             this.textBox_pass.Text = "Modzelewski";
             this.textBox_pass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_pass_KeyDown);
@@ -67,10 +67,10 @@
             // textBox_login
             // 
             this.textBox_login.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox_login.Location = new System.Drawing.Point(45, 68);
+            this.textBox_login.Location = new System.Drawing.Point(13, 44);
             this.textBox_login.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_login.Name = "textBox_login";
-            this.textBox_login.Size = new System.Drawing.Size(265, 25);
+            this.textBox_login.Size = new System.Drawing.Size(267, 25);
             this.textBox_login.TabIndex = 2;
             this.textBox_login.Text = "Damian";
             // 
@@ -78,7 +78,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(45, 43);
+            this.label1.Location = new System.Drawing.Point(13, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 20);
@@ -88,8 +88,8 @@
             // Password
             // 
             this.Password.AutoSize = true;
-            this.Password.Font = new System.Drawing.Font("Segoe Script", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Password.Location = new System.Drawing.Point(45, 142);
+            this.Password.Font = new System.Drawing.Font("Segoe Script", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Password.Location = new System.Drawing.Point(14, 109);
             this.Password.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(79, 20);
@@ -98,7 +98,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(49, 243);
+            this.button1.Location = new System.Drawing.Point(13, 219);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 30);
@@ -109,7 +109,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(212, 243);
+            this.button2.Location = new System.Drawing.Point(180, 219);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 30);
@@ -123,7 +123,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(344, 289);
+            this.ClientSize = new System.Drawing.Size(298, 272);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Password);
