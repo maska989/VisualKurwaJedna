@@ -49,8 +49,7 @@ namespace Logowanie
                     using (StreamWriter sw = File.CreateText(scieszka))
                     {
                         list.Add(new User("D", "M", Ranga.Administrator));
-                        Login L = new Login();
-                        L.Hide();
+                        sw.Close();
                     }
                 }
                 else if (dialogResult == DialogResult.No)
@@ -64,6 +63,8 @@ namespace Logowanie
 
         private void autoryz(string x, string y, List<User> a)
         {
+            
+           
             foreach (User u in a)
             {
                 if (u.UserName == x && u.PassCrypt(y) == true)
@@ -78,8 +79,18 @@ namespace Logowanie
                 else if (u.UserName == x && (u.PassCrypt(y) == false))
                 {
                     MessageBox.Show("Błędne Hasło", "Błąd Logowania", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Application.Exit();
+                    Login L = new Login();
+                    L.Show();
+                    break;
                 }
+                else
+                {
+                    MessageBox.Show("Błędny login", "Błąd Logowania", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Login L = new Login();
+                    L.Show();
+                    break;
+                }
+                
             }
 
             

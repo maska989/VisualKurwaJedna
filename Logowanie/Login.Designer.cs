@@ -32,6 +32,7 @@
             this.Password = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
             // 
             // panel4
@@ -118,12 +119,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(13, 287);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(319, 250);
+            this.webBrowser1.TabIndex = 6;
+            this.webBrowser1.Url = new System.Uri("https://www.google.com/", System.UriKind.Absolute);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(344, 289);
+            this.ClientSize = new System.Drawing.Size(344, 558);
+            this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Password);
@@ -156,5 +167,6 @@
         private System.Windows.Forms.Label Password;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
