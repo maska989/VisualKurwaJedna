@@ -37,6 +37,10 @@ namespace Logowanie
 
                 PushDatagrid();
             }
+            else if(isAdmin == Ranga.Administrator)
+            {
+                button2.Visible = false;
+            }
 
         }
         private void button4_Click(object sender, EventArgs e) //zapisz w Tab Edycja
@@ -71,6 +75,7 @@ namespace Logowanie
 
         private void Form2_Load(object sender, EventArgs e)
         {
+
             
         }
 
