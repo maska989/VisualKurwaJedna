@@ -13,6 +13,7 @@ namespace Logowanie
     public partial class Form1 : Form
     {
         Ranga isAdmin;
+
         public Form1(string UserName, Ranga isAdmin)
         {
 
@@ -60,6 +61,12 @@ namespace Logowanie
         {
             Form2 form2 = new Form2(isAdmin);
             form2.Show();
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            HTML html = new HTML();
+            html.Show();
         }
     }
 }

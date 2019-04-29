@@ -32,12 +32,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Edycja = new System.Windows.Forms.Button();
             this.ComboRanga = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(90, 9);
+            this.label1.Location = new System.Drawing.Point(97, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 17);
@@ -47,10 +51,15 @@
             // 
             // Edycja
             // 
-            this.Edycja.Location = new System.Drawing.Point(63, 76);
+            this.Edycja.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Edycja.AutoSize = true;
+            this.Edycja.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Edycja.Location = new System.Drawing.Point(53, 76);
             this.Edycja.Margin = new System.Windows.Forms.Padding(4);
             this.Edycja.Name = "Edycja";
-            this.Edycja.Size = new System.Drawing.Size(100, 30);
+            this.Edycja.Size = new System.Drawing.Size(57, 27);
             this.Edycja.TabIndex = 2;
             this.Edycja.Text = "Edycja";
             this.Edycja.UseVisualStyleBackColor = true;
@@ -58,6 +67,9 @@
             // 
             // ComboRanga
             // 
+            this.ComboRanga.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ComboRanga.Enabled = false;
             this.ComboRanga.FormattingEnabled = true;
             this.ComboRanga.Location = new System.Drawing.Point(53, 44);
@@ -65,12 +77,28 @@
             this.ComboRanga.Size = new System.Drawing.Size(121, 25);
             this.ComboRanga.TabIndex = 3;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.AutoSize = true;
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button1.Location = new System.Drawing.Point(117, 75);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(53, 27);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "HTML";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(230, 119);
+            this.ClientSize = new System.Drawing.Size(228, 165);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.ComboRanga);
             this.Controls.Add(this.Edycja);
             this.Controls.Add(this.label1);
@@ -92,6 +120,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Edycja;
         private System.Windows.Forms.ComboBox ComboRanga;
+        private System.Windows.Forms.Button button1;
     }
 }
 
